@@ -1,7 +1,7 @@
 
 ## Calculadora de IMC
 
-Mejroas realizadas con respecto al enunciado de la práctica:
+Mejoras realizadas con respecto al enunciado de la práctica:
 
 - Se ha **añadido un `ViewModel` para separar el modelo de la vista** y actualizarla a través de ese objeto ViewModel, además, la actualización es automática cuando se modifica el modelo. Esto lo veremos más adelante, pero para que nos vaya sonando. Además, He empleado LiveData, que es una clase que se encarga de notificar a la vista cuando el modelo ha cambiado. En la actualidad también suele emplearse StateFlow, pero requiere un poco más de código (precisamos estudiar Flow)
   - https://developer.android.com/reference/androidx/lifecycle/ViewModel
