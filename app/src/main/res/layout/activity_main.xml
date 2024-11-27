@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:background="@color/design_default_color_background">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtIMC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/merienda_extrabold"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPeso"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/layoutPeso"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layoutPeso"
+            app:srcCompat="@drawable/ic_balanza" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPeso"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/txtPeso"
+            app:layout_constraintStart_toEndOf="@id/ivPeso"
+            app:layout_constraintTop_toBottomOf="@id/txtIMC">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivAltura"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/layoutAltura"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layoutAltura"
+            app:srcCompat="@drawable/ic_altura" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutAltura"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/txtAltura"
+            app:layout_constraintStart_toEndOf="@id/ivAltura"
+            app:layout_constraintTop_toBottomOf="@id/layoutPeso">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAltura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivSexo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/tvSexo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSexo"
+            app:srcCompat="@drawable/ic_sexo" />
+
+        <TextView
+            android:id="@+id/tvSexo"
+            style="@style/Widget.IMC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/merienda_bold"
+            android:text="@string/txtSexo"
+            app:layout_constraintStart_toStartOf="@id/layoutAltura"
+            app:layout_constraintTop_toBottomOf="@id/layoutAltura" />
+
+        <RadioGroup
+            android:id="@+id/rgSexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/rbHombre"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/tvSexo"
+            app:layout_constraintTop_toBottomOf="@id/tvSexo">
+
+            <RadioButton
+                android:id="@+id/rbHombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtHombre" />
+
+            <RadioButton
+                android:id="@+id/rbMujer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtMujer" />
+
+            <RadioButton
+                android:id="@+id/rbSinEspecificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtSinEspecificar" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/ivAdulto"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/swAdulto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/swAdulto"
+            app:srcCompat="@drawable/ic_adulto" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swAdulto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:fontFamily="@font/merienda_bold"
+            android:text="@string/txtAdulto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/rgSexo"
+            app:layout_constraintTop_toBottomOf="@id/rgSexo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btCalcular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/merienda_bold"
+            android:text="@string/txtCarcular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/swAdulto"
+            app:layout_constraintTop_toBottomOf="@id/swAdulto" />
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/merienda_bold"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btCalcular"
+            tools:text="IMC: 22.09" />
+
+        <com.pepinho.pmdm.indicemasacorporal.ImageViewBarra
+            android:id="@+id/ivIMC"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:contentDescription="@string/muestra_el_imc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+            app:srcCompat="@drawable/imc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

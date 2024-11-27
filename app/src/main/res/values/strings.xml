@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nombre de la App -->
+    <string name="app_name">Índice de masa corporal</string>
+
+    <!-- Texto Hint para el peso -->
+    <string name="txtPeso">Peso (kg)</string>
+    <string name="txtAltura">Altura (cm)</string>
+
+    <!-- texto que aparece en el radio button Group -->
+    <string name="txtSexo">Sexo </string>
+    <!-- Opción si indica que es hombre  -->
+    <string name="txtHombre">Hombre</string>
+    <!-- Opción si indica que es mujer -->
+    <string name="txtMujer">Mujer</string>
+    <!-- Otros o prefiere no especificar  -->
+    <string name="txtSinEspecificar">Sin especificar</string>
+
+    <!-- Etiqueta del texto que indica si es o no adulto.  -->
+    <string name="txtAdulto">Adulto</string>
+
+    <!-- Etiqueta del botón de cálculo  -->
+    <string name="txtCarcular">Calcular IMC</string>
+
+    <!-- Cadena del formato de salida. Recoge una cadena  -->
+    <string name="txtIndice">IMC: %s</string>
+    <string name="muestra_el_imc">Muestra el IMC</string>
+</resources>
